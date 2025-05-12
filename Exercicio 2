@@ -1,0 +1,20 @@
+function verificaFibonacci(numero) {
+    let anterior = 0;
+    let atual = 1;
+
+    while (atual < numero) {
+        let proximo = anterior + atual;
+        anterior = atual;
+        atual = proximo;
+    }
+
+    if (numero === 0 || atual === numero) {
+        console.log(`${numero} pertence à sequência de Fibonacci.`);
+    } else {
+        console.log(`${numero} não pertence à sequência de Fibonacci.`);
+    }
+}
+
+const numeroInformado = 8;
+
+verificaFibonacci(numeroInformado);
